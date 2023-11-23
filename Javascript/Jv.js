@@ -5,9 +5,10 @@
 //Svolgimento
 
 const items = document.getElementsByClassName ('carousel-item');
-
+const ind = document.getElementsByClassName ('carousel-indicators');
 
 let activeItem = 0;
+
 
 
 const next = document.querySelector(".carousel-control-next");
@@ -28,13 +29,14 @@ next.addEventListener('click',
                    
                     //Togliamo la classe active dall'elemento corrente
                     items[activeItem].classList.remove ('active');
-
+                    // ind[activeItem].classList.remove ('active');
+                    console.log (ind);
                     //incremento l'indice
                     activeItem++;
 
                     //aggiungo la classe active al nuovo elemento
                     items[activeItem].classList.add('active');
-                    console.log (activeItem);
+                    //ind[activeItem].classList.add ('active');
 
                     prev.classList.remove('hidden');
                     
@@ -43,15 +45,19 @@ next.addEventListener('click',
                         //siamo arrivati all'ultimo elemento
                          next.classList.add('hidden');
 
-                     }
+                    }
+
+                    if (activeItem === 3){
+
+                        //siamo arrivati all'ultimo elemento
+                        prev.classList.add('thirdImg');
+
+                    }
 
                 }
 
 
             }
-
-
-
 );
 
 // Se clicco la freccia di sinistra, scorrerrà in dietro
