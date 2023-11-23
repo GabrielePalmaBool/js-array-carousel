@@ -5,11 +5,9 @@
 //Svolgimento
 
 const items = document.getElementsByClassName ('carousel-item');
-const ind = document.getElementsByClassName ('carousel-indicators');
+const ind = document.getElementsByClassName ('ind');
 
 let activeItem = 0;
-
-
 
 const next = document.querySelector(".carousel-control-next");
 
@@ -29,14 +27,15 @@ next.addEventListener('click',
                    
                     //Togliamo la classe active dall'elemento corrente
                     items[activeItem].classList.remove ('active');
-                    // ind[activeItem].classList.remove ('active');
-                    console.log (ind);
+                    ind[activeItem].classList.remove ('active');
+
+                    console.log (ind[0]);
                     //incremento l'indice
                     activeItem++;
 
                     //aggiungo la classe active al nuovo elemento
                     items[activeItem].classList.add('active');
-                    //ind[activeItem].classList.add ('active');
+                    ind[activeItem].classList.add ('active');
 
                     prev.classList.remove('hidden');
                     
@@ -69,12 +68,14 @@ prev.addEventListener('click',
 
                     //Togliamo la classe active dall'elemento corrente
                     items[activeItem].classList.remove ('active');
+                    ind[activeItem].classList.remove ('active');
 
                     //decremento l'indice
                     activeItem--;
 
                     //aggiungo la classe active al nuovo elemento
                     items[activeItem].classList.add('active');
+                    ind[activeItem].classList.add ('active');
 
                     console.log (activeItem);
 
