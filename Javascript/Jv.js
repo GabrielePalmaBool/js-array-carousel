@@ -29,7 +29,6 @@ next.addEventListener('click',
                     items[activeItem].classList.remove ('active');
                     ind[activeItem].classList.remove ('active');
 
-                    console.log (ind[0]);
                     //incremento l'indice
                     activeItem++;
 
@@ -77,8 +76,7 @@ prev.addEventListener('click',
                     items[activeItem].classList.add('active');
                     ind[activeItem].classList.add ('active');
 
-                    console.log (activeItem);
-
+                
                     if (activeItem === items.length -2){
 
                         //torniamo indietro al penultimo elemento
