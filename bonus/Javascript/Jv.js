@@ -63,9 +63,6 @@ prev.addEventListener('click',
                     items[activeItem].classList.remove ('active');
                     ind[activeItem].classList.remove ('active');
 
-
-
-
                     if (activeItem === 0) {
                     
                         activeItem = items.length;
@@ -88,11 +85,8 @@ prev.addEventListener('click',
                     ind[activeItem].classList.add ('active');
 
                 
-                    
                 }
 
             }
-
-
 
 );
