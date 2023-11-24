@@ -63,14 +63,14 @@ prev.addEventListener('click',
                     items[activeItem].classList.remove ('active');
                     ind[activeItem].classList.remove ('active');
 
-                    //decremento l'indice
-                    activeItem--;
 
-                    //aggiungo la classe active al nuovo elemento
-                    items[activeItem].classList.add('active');
-                    ind[activeItem].classList.add ('active');
 
+
+                    if (activeItem === 0) {
                     
+                        activeItem = items.length;
+
+                    }
 
                     if (activeItem === items.length -2){
 
@@ -79,13 +79,16 @@ prev.addEventListener('click',
                         
                      }
 
-                     else if (activeItem === 0) {
+
+                    //decremento l'indice
+                    activeItem--;
+
+                    //aggiungo la classe active al nuovo elemento
+                    items[activeItem].classList.add('active');
+                    ind[activeItem].classList.add ('active');
+
+                
                     
-                        //siamo arrivati all'ultimo elemento
-                        prev.classList.add('hidden');
-
-                     }
-
                 }
 
             }
