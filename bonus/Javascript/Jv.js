@@ -35,12 +35,6 @@ next.addEventListener('click',
                         activeItem = 0;
                     }
 
-                    if (activeItem === 3){
-
-                        //siamo arrivati all'ultimo elemento
-                        prev.classList.add('thirdImg');
-
-                    }
 
                     //aggiungo la classe active al nuovo elemento
                     items[activeItem].classList.add('active');
