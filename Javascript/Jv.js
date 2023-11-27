@@ -45,20 +45,13 @@ next.addEventListener('click',
 
                     }
 
-                    if (activeItem === 3){
-
-                        //siamo arrivati all'ultimo elemento
-                        prev.classList.add('thirdImg');
-
-                    }
-
                 }
 
 
             }
 );
 
-// Se clicco la freccia di sinistra, scorrerrà in dietro
+// Se clicco la freccia di sinistra, scorrerrà indietro
 prev.addEventListener('click',
 
             function () {
